@@ -1,0 +1,116 @@
+.header {
+  background-color: #f5f5f5;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+    @media (max-width: 992px) {
+      padding: 5px;
+    }
+  }
+
+  &__logo,
+  &__link {
+    text-transform: uppercase;
+  }
+
+  &__logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 0 8px;
+    color: #e9e9e9;
+    font-family: "Bebas Neue";
+  }
+  &__links {
+    transition: 0.7s;
+    display: flex;
+
+    @media (max-width: 992px) {
+      left: -100%;
+      position: fixed;
+      padding: 30px;
+      top: 0;
+      bottom: 0;
+      flex-direction: column;
+      background: $accentColor;
+      justify-content: space-between;
+      z-index: 3;
+    }
+    &.active {
+      width: 80%;
+      left: 0;
+    }
+  }
+
+  &__link {
+    margin-left: 50px;
+    font-size: 13px;
+    color: #606060;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      color: $accentColor;
+    }
+    @media (max-width: 992px) {
+      color: #e9e9e9;
+    }
+  }
+
+  &__burger {
+    display: none;
+    padding: 10px;
+    &.active span {
+      transform: rotate(140deg);
+      &:before {
+        opacity: 0;
+      }
+      &::after {
+        transform: rotate(85deg);
+        bottom: 0px;
+      }
+    }
+    @media (max-width: 992px) {
+      display: block;
+    }
+
+    span {
+      @media (max-width: 992px) {
+        display: block;
+      }
+      z-index: 1;
+      // display: none;
+      position: relative;
+      width: 30px;
+      height: 3px;
+      background: #000;
+      transition: 0.4s;
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background: #000;
+      }
+      &:after {
+        position: absolute;
+        bottom: 8px;
+        content: "";
+        width: 30px;
+        height: 3px;
+        background: #000;
+      }
+    }
+  }
+}

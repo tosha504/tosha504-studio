@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a,
+a:active,
+a:hover {
+  outline: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+button,
+button:active,
+button:focus,
+button:hover,
+input,
+input:active,
+input:focus,
+input:hover,
+textarea,
+textarea:focus {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.accent {
+  color: $accentColor;
+}
+
+.subtitle {
+  padding: 0 20px;
+  font-size: 16px;
+  color: #606060;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 82px;
+    height: 1px;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    display: inline-block;
+  }
+}
+
+.green {
+  font-size: 12px;
+  line-height: 26px;
+  color: $accentColor;
+  font-weight: 500;
+}
