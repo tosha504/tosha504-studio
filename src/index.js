@@ -33,7 +33,6 @@ jQuery(document).ready(function($) {
   $(".slick-dots li").html("");
 
   $(window).on("scroll", function() {
-    console.log($(this).scrollTop());
     if ($(this).scrollTop() > 650 && $(this).scrollTop() < 1000) {
       $(".work__item").addClass("anim");
     }
